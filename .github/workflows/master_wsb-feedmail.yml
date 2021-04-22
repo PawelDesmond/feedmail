@@ -45,7 +45,7 @@ jobs:
         name: node-app
 
     - name: Azure logowanie
-     uses: azure/login@v1
+      uses: azure/login@v1
       with:
         creds: ${{ userName: "olbromski2_66983@cloud.wsb.wroclaw.pl", password: "Kun61017" }}
 
