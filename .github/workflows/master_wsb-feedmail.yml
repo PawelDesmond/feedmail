@@ -44,6 +44,11 @@ jobs:
       with:
         name: node-app
 
+    - name: Azure logowanie
+     uses: azure/login@v1
+      with:
+        creds: ${{ userName: "olbromski2_66983@cloud.wsb.wroclaw.pl", password: "Kun61017" }}
+
     - name: 'Deploy to Azure Web App'
       id: deploy-to-webapp
       uses: azure/webapps-deploy@v2
@@ -52,3 +57,4 @@ jobs:
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_fe5bdf53ec8f49d290ed7add8239d11b }}
         package: .
+
