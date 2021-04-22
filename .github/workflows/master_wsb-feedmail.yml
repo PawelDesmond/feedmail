@@ -47,7 +47,7 @@ jobs:
     - name: Azure logowanie
       uses: azure/login@v1
       with:
-        creds: ${{ userName: "olbromski2_66983@cloud.wsb.wroclaw.pl", password: "Kun61017" }}
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
 
     - name: 'Deploy to Azure Web App'
       id: deploy-to-webapp
